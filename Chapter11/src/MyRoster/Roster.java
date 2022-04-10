@@ -1,5 +1,6 @@
 package MyRoster;
 
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -83,12 +84,13 @@ public class Roster
 			System.out.println("Problem Reading File");
 			System.err.println("IO Exception: " + e.getMessage());
 		}
-		
+
 		catch(ClassNotFoundException e) 
 		{
 			System.out.println("Class Not Found Exception" + e.getMessage());
 			
 		}
+		
 		
 	}
 

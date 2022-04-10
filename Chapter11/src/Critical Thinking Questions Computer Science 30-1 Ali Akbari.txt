@@ -1,0 +1,33 @@
+﻿Critical Thinking Questions Chapter 9
+Ali Akbari
+
+
+1. No, because data in memory is temporary while data on a file is on a persistent medium. 
+Data on memory gets reset after every time the system is rebooted. Ram data is used by 
+applications when the system is on and the application is running.  
+
+
+2. import java.io.File;
+
+
+3. You need to put double slashes (\\) instead of one slash.
+
+
+4. 
+
+a) catch(IOException e)
+
+
+b) catch(IOException e)        
+{
+        System.out.println("Problem Reading File");
+        System.err.println("File Name Cannot be Used To Create File " 
++ e.getMessage());
+
+
+}
+
+
+5. 
+a) err stream.
+b) In the Console.
