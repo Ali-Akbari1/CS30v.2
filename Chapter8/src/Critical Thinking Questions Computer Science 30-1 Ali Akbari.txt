@@ -1,0 +1,40 @@
+﻿﻿Critical Thinking Questions Chapter 8
+Ali Akbari
+
+
+
+
+1. Classes that are derived from existing classes are known as an is-a relationship. A class that contains class member variables is known as a has-a relationship. Is-a is based on inheritance while has-a relationships are based on relationships with other classes.
+
+
+2. Both methods will be available to an object of the derived class.
+
+
+3. Abstract methods come from abstract classes, however to override a method you do not have to be in an abstract class. Abstract methods have to implement all the behaviors of the parent class, while overriding methods is not mandatory.
+
+
+4. Abstract classes can have either abstract or non-abstract methods, while an interface can only have abstract methods. Interfaces can not be inherited but can be implemented by any number of classes. 
+
+
+6. a) Abstract method. 
+
+
+b) Wo is an interface. 
+
+
+c) Wo is an interface, thus to use its methods you have to implement Wo. 
+
+
+d) doThat(), doThis(), doNow().
+
+
+e) doThis() will now return 10 because Roo overrides Bo. 
+
+
+f) Makes z = 1 in Bo. 
+
+
+g) doThis() method in Bo can be called using super.doThis()
+
+
+h) A method in Roo can call doThis() method using super.doThis()
