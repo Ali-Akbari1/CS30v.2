@@ -1,9 +1,9 @@
-﻿Critical Thinking Questions Chapter 9
+﻿Critical Thinking Questions Chapter 11
 Ali Akbari
 
 
-1. No, because data in memory is temporary while data on a file is on a persistent medium. 
-Data on memory gets reset after every time the system is rebooted. Ram data is used by 
+1. No, because data in memory is temporary while data on a file is on a persistent medium such as a hard drive. 
+Data on memory gets reset after every time the system is rebooted. RAM data is used by 
 applications when the system is on and the application is running.  
 
 
