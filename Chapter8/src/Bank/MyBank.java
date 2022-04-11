@@ -1,5 +1,6 @@
 /*
 Program: MyBank.java          Last Date of this Revision: March 31, 2022
+
 Purpose: An application that gets user input and returns the variables
 Author: Ali Akbari 
 School: CHHS
