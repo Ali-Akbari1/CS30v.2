@@ -4,23 +4,22 @@ package FindName;
 
 public class Search {
 
-	/**
-	 * Returns the index of the element numToFind in array array.
-	 * -1 returned if element not found.
-	 * pre: none
-	 * post: index of numToFind has been returned. -1 has been
-	 * returned if element not found.
-	 */
-	public static int linear(int[] array, int numToFind) {
+
+	
+	public static int linear(String[] array, String NamToFind) {
 		int index = 0;
+		int size = array.length;
 		
-		while ((array[index] != numToFind) && (index < array.length - 1)) {
+		while ((array[index] != NamToFind) && (index < size - 1)) {
 			index += 1;
 		}
 		
-		if (array[index] == numToFind) {
+		if (array[index] == NamToFind) 
+		{
 			return(index);
-		} else {
+		} 
+		else 
+		{
 			return(-1);
 		}
 	}

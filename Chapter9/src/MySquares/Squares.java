@@ -3,7 +3,8 @@
 
 /*
 
-Program: Squares.java          Last Date of this Revision: March 31, 2022
+Program: Squares.java          Last Date of this Revision: April 11, 2022
+
 
 Purpose: An application that gets the square of the index in a array
 Author: Ali Akbari 
@@ -46,6 +47,8 @@ public class Squares
 				numbers[2] +  " " + numbers[3] + " " + numbers[4]);
 	}
 }
+
+
 
 
 /* SCREEN DUMP
