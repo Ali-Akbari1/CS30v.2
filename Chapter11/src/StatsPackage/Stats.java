@@ -29,6 +29,7 @@ package StatsPackage;
 
 
 import java.io.*;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 
 
@@ -47,7 +48,7 @@ public class Stats
 	public static void main (String[] args) 
 	{
 		
-		
+		NumberFormat nf = NumberFormat.getPercentInstance();
 		
 		
 		//Create a New File Instance
