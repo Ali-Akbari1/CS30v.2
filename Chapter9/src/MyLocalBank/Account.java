@@ -37,10 +37,10 @@ public class Account {
 	 * post: An account has been created. Balance and 
 	 * customer data has been initialized with parameters.
 	 */
-	public Account(double bal, String fName, String lName)//include street, city, province or state, postal code or zip code
+	public Account(double bal, String fName, String lName, String street, String city, String province, String zip)//include street, city, province or state, postal code or zip code
 	 {
 		balance = bal;
-		cust = new Customer(fName, lName);//this constructor should reflect the new additions above, street, city, province, postal code
+		cust = new Customer(fName, lName, street, city, province, zip);//this constructor should reflect the new additions above, street, city, province, postal code
 		acctID = fName.substring(0,1) + lName;
 	}
 	
@@ -52,7 +52,7 @@ public class Account {
 	 */
 	public Account(String ID) {
 		balance = 0;
-		cust = new Customer("", "");
+		cust = new Customer("", "", "", "", "", "");
 		acctID = ID;
 	}
 
@@ -102,6 +102,10 @@ public class Account {
 
 
 
+	public void changeAddress() 
+	{
+		cust = new Customer("", "", "", "", "", "");
+	}
 	//Create a changeAddress() method that calls the cust object from above in order to change
 	//Street, city, province, postalCode
 

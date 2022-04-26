@@ -40,9 +40,9 @@ public class Bank
 	{
 		Account newAcct;
 		double bal;
-		String fName, lName;
+		String fName, lName, str,ct, prov, zip;
 
-	//add your string variables for street, city, province, postal code
+
 
 		Scanner input = new Scanner(System.in);
 		
@@ -52,18 +52,17 @@ public class Bank
 		System.out.print("Last name: ");
 		lName = input.nextLine();
 
-
-	//get customer street and record street
-
-	//get city 
-
-	//get province
-
-	//get postal code
-
-
-
-
+		System.out.print("Enter Your Street: ");
+		str = input.nextLine();
+		
+		System.out.print("Enter Your City: ");
+		ct = input.nextLine();
+		
+		System.out.print("Enter Your Province: ");
+		prov = input.nextLine();
+		
+		System.out.print("Enter Your Postal Code: ");
+		zip = input.nextLine();
 
 
 
@@ -71,7 +70,7 @@ public class Bank
 		System.out.print("Beginning balance: ");
 		bal = input.nextDouble();
 		
-		newAcct = new Account(bal, fName, lName); //update this constructor to include street, city, province, postal code	
+		newAcct = new Account(bal, fName, lName,str,ct,prov,zip); //update this constructor to include street, city, province, postal code	
 										//create acct object
 		accounts.add(newAcct);						//add account to bank accounts
 		
@@ -146,22 +145,48 @@ public class Bank
 	 	} else {
 	 		System.out.println("Account does not exist.");
 	 	}
-
-
-
-
-	//Create a modifyAccount(String AcctID) method 
-	if(acctIndex > 1) 
-	{
-		acct = accounts.get(acctIndex);
-		//acct.changeAddress();
-		//print acct to the screen
+	 	
+		if(acctIndex > 1) 
+		{
+			acct = accounts.get(acctIndex);
+			acct.changeAddress();
+			//print acct to the screen
+		}
+		else
+		{
+		  System.out.println("Account Does Not Exist");
+		}
 	}
-	else
-	{
-	  System.out.println("Account Does Not Exist");
-	}	
 
 
-	}
+
+
+	 	
+	 	public void modifyAccount(String AcctID) 
+	 	{
+	 		
+	 		String fName, lName, str,ct, prov, zip;
+			Scanner input = new Scanner(System.in);
+			
+			System.out.print("First name: ");
+			fName = input.nextLine();
+
+			System.out.print("Last name: ");
+			lName = input.nextLine();
+
+			System.out.print("Enter Your Street: ");
+			str = input.nextLine();
+			
+			System.out.print("Enter Your City: ");
+			ct = input.nextLine();
+			
+			System.out.print("Enter Your Province: ");
+			prov = input.nextLine();
+			
+			System.out.print("Enter Your Postal Code: ");
+			zip = input.nextLine();
+			
+	 	}
+
+	 	
 }
