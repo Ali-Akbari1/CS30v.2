@@ -1,18 +1,5 @@
 
-
-
-
-
-
-
 package MyLocalBank;
-
-
-
-
-
-
-
 
 
 
@@ -102,12 +89,14 @@ public class Account {
 
 
 
-	public void changeAddress() 
+	public void changeAddress(String street, String city, String province, String zip) 
 	{
-		cust = new Customer("", "", "", "", "", "");
+		cust.changeStreet(street);
+		cust.changeCity(city);
+		cust.changeProvince(province);
+		cust.changePostalCode(zip);
 	}
-	//Create a changeAddress() method that calls the cust object from above in order to change
-	//Street, city, province, postalCode
+
 
 
 
@@ -116,7 +105,7 @@ public class Account {
 	
 	/** 
 	 * Returns a true when objects have matching account ids.
-	 * pre: none
+	 * pre: none 
 	 * post: true has been returned when the objects are equal,
 	 * false returned otherwise.
 	 */

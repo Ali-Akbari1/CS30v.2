@@ -26,6 +26,7 @@ package MyLocalBank;
 		do {
 			System.out.println("\nDeposit\\Withdrawal\\Check balance");
 			System.out.println("Add an account\\Remove an account");
+			System.out.println("Modify an Account");
 			System.out.println("Quit\n");
 			System.out.print("Enter choice: ");
 			action = input.next();
@@ -51,7 +52,9 @@ package MyLocalBank;
 				} else if (action.equalsIgnoreCase("R")) {
 					easySave.deleteAccount(acctID);
 				}
-				//write code to modify information if action equals "M"
+				else if (action.equalsIgnoreCase("M")) {
+					easySave.modifyAccount(acctID);
+				}
 			}
 		} while (!action.equalsIgnoreCase("Q"));
 	}

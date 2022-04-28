@@ -70,9 +70,11 @@ public class Bank
 		System.out.print("Beginning balance: ");
 		bal = input.nextDouble();
 		
-		newAcct = new Account(bal, fName, lName,str,ct,prov,zip); //update this constructor to include street, city, province, postal code	
-										//create acct object
-		accounts.add(newAcct);						//add account to bank accounts
+		newAcct = new Account(bal, fName, lName,str,ct,prov,zip); 
+										
+		//create acct object
+		accounts.add(newAcct);						
+		//add account to bank accounts
 		
 		System.out.println("Account created. Account ID is: " + newAcct.getID());
 	}
@@ -138,24 +140,14 @@ public class Bank
 		Account acctToMatch, acct;
 		
 	 	acctToMatch = new Account(acctID);
-	 	acctIndex = accounts.indexOf(acctToMatch);		//retrieve location of account
+	 	acctIndex = accounts.indexOf(acctToMatch);	//retrieve location of account
 	 	if (acctIndex > -1) {
 	 		acct = accounts.get(acctIndex);	//retrieve object to display
 	 		System.out.println(acct);
 	 	} else {
 	 		System.out.println("Account does not exist.");
 	 	}
-	 	
-		if(acctIndex > 1) 
-		{
-			acct = accounts.get(acctIndex);
-			acct.changeAddress();
-			//print acct to the screen
-		}
-		else
-		{
-		  System.out.println("Account Does Not Exist");
-		}
+	 
 	}
 
 
@@ -164,27 +156,41 @@ public class Bank
 	 	
 	 	public void modifyAccount(String AcctID) 
 	 	{
+	 		int acctIndex;
+			Account acctToMatch, acct;
+			
+		 	acctToMatch = new Account(AcctID);
+		 	acctIndex = accounts.indexOf(acctToMatch);	
 	 		
-	 		String fName, lName, str,ct, prov, zip;
-			Scanner input = new Scanner(System.in);
-			
-			System.out.print("First name: ");
-			fName = input.nextLine();
+			if(acctIndex > -1) 
+			{
+				acct = accounts.get(acctIndex);
+		 		String str,ct, prov, zip;
+				Scanner input = new Scanner(System.in);
+				
 
-			System.out.print("Last name: ");
-			lName = input.nextLine();
-
-			System.out.print("Enter Your Street: ");
-			str = input.nextLine();
-			
-			System.out.print("Enter Your City: ");
-			ct = input.nextLine();
-			
-			System.out.print("Enter Your Province: ");
-			prov = input.nextLine();
-			
-			System.out.print("Enter Your Postal Code: ");
-			zip = input.nextLine();
+				System.out.print("Enter Your Street: ");
+				str = input.nextLine();
+				
+				System.out.print("Enter Your City: ");
+				ct = input.nextLine();
+				
+				System.out.print("Enter Your Province: ");
+				prov = input.nextLine();
+				
+				System.out.print("Enter Your Postal Code: ");
+				zip = input.nextLine();
+				
+				acct.changeAddress(str,ct,prov,zip);
+				accounts.set(acctIndex, acct);
+				System.out.println(acct);
+				
+			}
+			else
+			{
+			  System.out.println("Account Does Not Exist");
+			}
+	 		
 			
 	 	}
 
