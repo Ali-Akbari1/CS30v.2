@@ -1,3 +1,18 @@
+/*
+Program: Account.java          Last Date of this Revision: April 28, 2022
+
+
+
+Purpose: An application that creates an account
+Author: Ali Akbari 
+School: CHHS
+Course: Computer Science 30
+ 
+*/
+
+
+
+
 
 package MyLocalBank;
 
@@ -24,10 +39,14 @@ public class Account {
 	 * post: An account has been created. Balance and 
 	 * customer data has been initialized with parameters.
 	 */
-	public Account(double bal, String fName, String lName, String street, String city, String province, String zip)//include street, city, province or state, postal code or zip code
+	
+	//Account class that includes balance, first and last name, and address of user
+	public Account(double bal, String fName, String lName, String street, String city, String province, String zip)
 	 {
 		balance = bal;
-		cust = new Customer(fName, lName, street, city, province, zip);//this constructor should reflect the new additions above, street, city, province, postal code
+		
+		//constructor method
+		cust = new Customer(fName, lName, street, city, province, zip);
 		acctID = fName.substring(0,1) + lName;
 	}
 	
@@ -89,11 +108,19 @@ public class Account {
 
 
 
+	//method to change the address of the user
 	public void changeAddress(String street, String city, String province, String zip) 
 	{
+		//change the street of user to the street parameter passed in
 		cust.changeStreet(street);
+		
+		//change the city of user to the city parameter passed in
 		cust.changeCity(city);
+		
+		//change the province of user to the province parameter passed in
 		cust.changeProvince(province);
+		
+		//change the zip of the user to the zip parameter passed in
 		cust.changePostalCode(zip);
 	}
 

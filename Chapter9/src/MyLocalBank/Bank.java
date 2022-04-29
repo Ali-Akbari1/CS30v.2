@@ -1,4 +1,19 @@
 
+
+
+/*
+Program: Account.java          Last Date of this Revision: April 28, 2022
+
+
+Purpose: An application that prompts user for first and last name and address
+Author: Ali Akbari 
+School: CHHS
+Course: Computer Science 30
+ 
+*/
+
+
+
 package MyLocalBank;
 
 
@@ -38,12 +53,14 @@ public class Bank
 	 */
 	public void addAccount() 
 	{
+		
+		//variables
 		Account newAcct;
 		double bal;
 		String fName, lName, str,ct, prov, zip;
 
 
-
+		//prompts user for first and last name and address
 		Scanner input = new Scanner(System.in);
 		
 		System.out.print("First name: ");
@@ -153,15 +170,20 @@ public class Bank
 
 
 
-	 	
+	 	//method to modify the account of the user
 	 	public void modifyAccount(String AcctID) 
 	 	{
+	 		
+	 		
 	 		int acctIndex;
 			Account acctToMatch, acct;
 			
 		 	acctToMatch = new Account(AcctID);
 		 	acctIndex = accounts.indexOf(acctToMatch);	
 	 		
+		 	
+		 	//prompts user for new address and finds the account with the matching ID
+		 	//Then rewrites the data for the new address
 			if(acctIndex > -1) 
 			{
 				acct = accounts.get(acctIndex);
