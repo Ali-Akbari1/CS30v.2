@@ -1,0 +1,57 @@
+﻿Critical Thinking Questions Chapter 9
+Ali Akbari
+
+
+1. The index value of the third element in an array is 2.
+
+
+2. int[] quantities = new int[19];
+
+
+3. Double heights[] = {1.75,2.15,4.95};
+
+
+4. for (int integer: grades)
+{
+        System.out.println(integer);
+}
+
+
+5.
+
+ a) 
+int newData = 1;
+Int[] array = new int[10];
+for (int i = 0; i < 10; i++)
+{
+        array[i] = array[i] + 1
+}
+array[0] = newData;
+
+
+
+
+
+
+b)
+int newData = 10;
+Int[] array = new int[10];
+for (int i = 0; i < 10; i++)
+{
+        array[i] = array[i + 1]
+}
+array[10] = newData;
+
+
+6. When passing in a whole array you only need to write the type of array with square brackets and then its name. 
+If you are passing in a single element from the array you will have to indicate which one by using its index 
+and putting that index number into the square brackets. 
+
+
+7. Instead of having an array with a lot of elements inside of it that will not be used you can use an offset array index. 
+This helps so you can have the first element of an array start at whichever number you like and it also gets rid of the countless unused elements. 
+If an array required 5000 elements but only the last couple hundred were being used the solution would be an offset array index. 
+This would make it so the 0th element would start at 4501 or whichever number you would like. 
+
+
+8. The character that will be displayed will be “i”.

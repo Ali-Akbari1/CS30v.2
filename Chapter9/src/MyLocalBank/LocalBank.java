@@ -1,3 +1,24 @@
+
+
+/*
+Program: LocalBank.java          Last Date of this Revision: April 28, 2022
+
+
+
+Purpose: An application that prompts user for if they want to add or remove an account, make a deposit or withdrawal, 
+or check balance, or modify account
+Author: Ali Akbari 
+School: CHHS
+Course: Computer Science 30
+ 
+*/
+
+
+
+
+
+
+
 package MyLocalBank;
 
 /*
@@ -52,6 +73,8 @@ package MyLocalBank;
 				} else if (action.equalsIgnoreCase("R")) {
 					easySave.deleteAccount(acctID);
 				}
+				
+				//If User wants to Modify the account they Type M
 				else if (action.equalsIgnoreCase("M")) {
 					easySave.modifyAccount(acctID);
 				}

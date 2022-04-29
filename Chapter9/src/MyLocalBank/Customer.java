@@ -1,3 +1,22 @@
+
+/*
+Program: Customer.java          Last Date of this Revision: April 28, 2022
+
+
+
+Purpose: An application that changes the address of the user
+Author: Ali Akbari 
+School: CHHS
+Course: Computer Science 30
+ 
+*/
+
+
+
+
+
+
+
 package MyLocalBank;
 
 import java.util.Scanner;
@@ -18,8 +37,10 @@ public class Customer {
 	 * post: A Customer object has been created. 
 	 * Customer data has been initialized with parameters.
 	 */
-	public Customer(String fName, String lName, String str, String ct, String prov, String zip) //modify constructor to include street, city, province, postal code
+	public Customer(String fName, String lName, String str, String ct, String prov, String zip) 
 	{
+		
+		//variables
 		firstName = fName;
 		lastName = lName;
 		street = str;
@@ -27,11 +48,11 @@ public class Customer {
 		province = prov;
 		post = zip;
 
-		//reflect the changes in the parameter
+
 	}
 	
-	Scanner input = new Scanner(System.in);
 	
+	//change city method to change the city of the user to the one passed in the Customer Class
 	public void changeCity(String ct) 
 	{
 		
@@ -39,13 +60,14 @@ public class Customer {
 		
 	}
 	
-	
+	//change street method to change the street of the user to the one passed in the Customer Class
 	public void changeStreet(String str) 
 	{
 		street = str;
 		
 	}
 	
+	//change province method to change the province of the user to the one passed in the Customer Class
 	public void changeProvince(String prov) 
 	{
 		
@@ -53,6 +75,7 @@ public class Customer {
 		
 	}
 	
+	//change postal code method to change the postal code of the user to the one passed in the Customer Class
 	public void changePostalCode(String zip) 
 	{
 		

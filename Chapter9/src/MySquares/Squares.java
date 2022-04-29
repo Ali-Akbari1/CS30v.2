@@ -6,6 +6,7 @@
 Program: Squares.java          Last Date of this Revision: April 11, 2022
 
 
+
 Purpose: An application that gets the square of the index in a array
 Author: Ali Akbari 
 School: CHHS
