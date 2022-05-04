@@ -16,10 +16,22 @@ public class ReadButton {
 
         //Open | Open establishes a connection between your object and your physical Phidget. You provide a timeout value of 1000 to give the program 1000 milliseconds (1 second) to locate your Phidget. If your Phidget can't be found, an exception will be thrown.
         greenButton.open(5000);
+        
+        boolean buttonState = false;
 
         //Use your Phidgets | Here is where you use your Phidgets! This code checks the state of the button and prints true/false when the button is pressed/released. The sleep function means the button state is only checked every 150 milliseconds. Sleeping is used to make it easier to read the console output and to put less stress on your CPU.
         while(true){
-            System.out.println("Button State: " + greenButton.getState());
+        	
+        	if(greenButton.getState() && !buttonState)
+        	{
+        		System.out.println("Button State: " + greenButton.getState());
+        	}
+        	else if(!greenButton.getState() && buttonState)
+        	{
+        		System.out.println("Button State: " + greenButton.getState());
+        	}
+        		
+            buttonState = greenButton.getState();
             Thread.sleep(150);
         }
     }
