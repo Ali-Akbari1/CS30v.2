@@ -32,106 +32,96 @@ public class TugOfWar
 		
         
         boolean buttonState = false;
+        boolean redPlayer = false;
+        boolean greenPlayer = false;
         int greenCounter = 0;
         int redCounter = 0;
         
         
-        while(true){
+        while(greenCounter < 10 && redCounter < 10)
+	{
         	
         	if(greenButton.getState() && !buttonState)
         	{
         		greenCounter +=1;
-        		System.out.println(greenCounter);
+        		greenLED.setState(true);
+        		
         	}
+        	
+        	else if (!greenButton.getState()) 
+        	{
+        		greenLED.setState(false);
+        	}
+        	
         	if(redButton.getState() && !buttonState)
         	{
         		redCounter +=1;
-        		System.out.println(redCounter);
+        		redLED.setState(true);
+  
+        	}
+        	
+        	else if (!redButton.getState()) 
+        	{
+        		redLED.setState(false);
         	}
         	
         	
         	
-            buttonState = greenButton.getState();
-            if (greenCounter >= 10) 
-            {
+            greenPlayer = greenButton.getState();
+            redPlayer = redButton.getState();
+            Thread.sleep(150);
+	} 
+        
+        //Flash all lights
+        
+            
+        		 redLED.setState(false);
+        		 greenLED.setState(false);
+        		 Thread.sleep(100);
               	 redLED.setState(true);
                	 greenLED.setState(true);
-               	 Thread.sleep(500);
+               	 Thread.sleep(100);
                	 redLED.setState(false);
                	 greenLED.setState(false);
-               	 Thread.sleep(500);
+               	 Thread.sleep(100);
             	 
             	 
+               	 
+        //Display the winner
+         
             	 
-            	 greenLED.setState(true);
-            	 Thread.sleep(500);
-            	 greenLED.setState(false);
-            	 Thread.sleep(500);
-            	 greenLED.setState(true);
-            	 Thread.sleep(500);
-            	 greenLED.setState(false);
-            	 Thread.sleep(500);
-            	 greenLED.setState(true);
-            	 Thread.sleep(500);
-            	 greenLED.setState(false);
-            	 Thread.sleep(500);
-            	 greenLED.setState(true);
-            	 Thread.sleep(500);
-            	 greenLED.setState(false);
-            	 Thread.sleep(500);
-            	 greenLED.setState(true);
-            	 Thread.sleep(500);
-            	 greenLED.setState(false);
-            	 Thread.sleep(500);
-                 greenCounter = 0;
-                 redCounter = 0;
-            	 break;
-            	 
+            
+            if (redCounter == 10) 
+            {
+            	
+            	while (redCounter > 5) 
+            	{
+            		redLED.setState(true);
+            		Thread.sleep(500);
+            		redLED.setState(false);
+            		Thread.sleep(500);
+            		redCounter--;
+            	}
             }
             
-            if (redCounter >=10) 
+            
+            
+            
+            else if (greenCounter == 10) 
             {
-           	 redLED.setState(true);
-           	 greenLED.setState(true);
-           	 Thread.sleep(500);
-           	 redLED.setState(false);
-           	 greenLED.setState(false);
-           	 Thread.sleep(500);
-           	 
-           	 redLED.setState(true);
-           	 Thread.sleep(500);
-          	 redLED.setState(false);
-           	 Thread.sleep(500);
-             redLED.setState(true);
-             Thread.sleep(500);
-          	 redLED.setState(false);
-           	 Thread.sleep(500);
-           	 redLED.setState(true);
-           	 Thread.sleep(500);
-          	 redLED.setState(false);
-           	 Thread.sleep(500);
-           	 redLED.setState(true);
-           	 Thread.sleep(500);
-          	 redLED.setState(false);
-           	 Thread.sleep(500);
-           	 redLED.setState(true);
-           	 Thread.sleep(500);
-          	 redLED.setState(false);
-           	 Thread.sleep(500);
-             greenCounter = 0;
-             redCounter = 0;
-           	 break;
-           	 
-            
-            
-            
+            	while (greenCounter > 5) 
+            	{
+            		greenLED.setState(true);
+            		Thread.sleep(500);
+            		greenLED.setState(false);
+            		Thread.sleep(500);
+            		greenCounter--;
+            		
+            	}
+            } 
+          
     		
     	}
-            
-            
-            
-        }
-        
- 
+
 }
-}
+
