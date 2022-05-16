@@ -13,7 +13,7 @@ public class Thermostat
 	        TemperatureSensor temperatureSensor = new TemperatureSensor();
 	        DigitalOutput greenLED = new DigitalOutput();
 	        DigitalOutput redLED = new DigitalOutput();
-	        temperatureSensor.open(1000);
+	        temperatureSensor.open(1000); 
 	        
 	        int setTemp = 21;
 
@@ -75,7 +75,6 @@ public class Thermostat
 		        
 		        else
 		        {
-		        	
 		        	
 		        	redLED.setState(true);
 		        	greenLED.setState(false);
