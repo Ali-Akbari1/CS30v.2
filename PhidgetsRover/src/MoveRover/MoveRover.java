@@ -26,7 +26,7 @@ public class MoveRover {
         rightMotors.setTargetVelocity(1);
 
         //Wait for 1 second
-        Thread.sleep(1000);
+        Thread.sleep(5000);
 
         //Stop motors
         leftMotors.setTargetVelocity(0);
