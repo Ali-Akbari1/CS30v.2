@@ -41,7 +41,7 @@ public class RoverChallenge {
         rightMotors.setTargetVelocity(1);
 
         //Wait for 2 second
-        Thread.sleep(602);
+        Thread.sleep(615);
         
         //Stop motors
         leftMotors.setTargetVelocity(0);
@@ -70,7 +70,7 @@ public class RoverChallenge {
         rightMotors.setTargetVelocity(1);
 
         //Wait for 2 second
-        Thread.sleep(602);
+        Thread.sleep(620);
         
         //Stop motors
         leftMotors.setTargetVelocity(0);
@@ -85,7 +85,7 @@ public class RoverChallenge {
         rightMotors.setTargetVelocity(1);
 
         //Wait for 1 second
-        Thread.sleep(1750);
+        Thread.sleep(1700);
         
         //Stop motors
         leftMotors.setTargetVelocity(0);
@@ -99,7 +99,7 @@ public class RoverChallenge {
         rightMotors.setTargetVelocity(1);
 
         //Wait for 2 second
-        Thread.sleep(602);
+        Thread.sleep(628);
         
         //Stop motors
         leftMotors.setTargetVelocity(0);
@@ -115,7 +115,7 @@ public class RoverChallenge {
         rightMotors.setTargetVelocity(1);
 
         //Wait for 1 second
-        Thread.sleep(1750);
+        Thread.sleep(1959);
         
         //Stop motors
         leftMotors.setTargetVelocity(0);
