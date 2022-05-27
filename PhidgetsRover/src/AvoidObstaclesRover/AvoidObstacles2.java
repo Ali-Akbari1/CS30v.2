@@ -28,6 +28,12 @@ package AvoidObstaclesRover;
 	            System.out.println("Distance: " + sonar.getDistance() + " mm");
 	            
 	            if (sonar.getDistance() < 450) {
+	            	
+	                //Object detected! Stop motors
+	                leftMotors.setTargetVelocity(0);
+	                rightMotors.setTargetVelocity(0);
+	                
+	                
 	                //Object detected! Stop motors
 	                leftMotors.setTargetVelocity(-1);
 	                rightMotors.setTargetVelocity(-1);
