@@ -5,7 +5,7 @@ package MyJoystick;
 //Add Phidgets Library
 import com.phidget22.*;
 
-public class Turn {
+public class Turn2 {
   public static void main(String[] args) throws Exception{
 
       //Connect to wireless rover
@@ -16,18 +16,23 @@ public class Turn {
       DCMotor rightMotors = new DCMotor();
       VoltageRatioInput vAxis = new VoltageRatioInput(); 
       VoltageRatioInput hAxis = new VoltageRatioInput(); 
+      DigitalInput joystickButton = new DigitalInput();
 
       //Address
       leftMotors.setChannel(0);
       rightMotors.setChannel(1);
       vAxis.setChannel(0);
       hAxis.setChannel(1);
+      joystickButton.setHubPort(0);
 
       //Open
       leftMotors.open(5000);
       rightMotors.open(5000);
       vAxis.open(5000);
       hAxis.open(5000);
+      joystickButton.open(1000);
+      
+      
 
       //Increase acceleration 
       leftMotors.setAcceleration(leftMotors.getMaxAcceleration());
@@ -53,6 +58,16 @@ public class Turn {
           //Apply values 
           leftMotors.setTargetVelocity(leftMotorsSpeed); 
           rightMotors.setTargetVelocity(rightMotorsSpeed);
+          
+          
+          if (joystickButton.getState())
+          {
+        	  leftMotors.setTargetVelocity(-1);
+        	  Thread.sleep(1000);
+          }
+          
+          
+ 
 
           //Wait for 100 milliseconds
           Thread.sleep(100);
