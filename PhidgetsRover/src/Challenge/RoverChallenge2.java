@@ -39,7 +39,7 @@ public class RoverChallenge2
             System.out.println("Distance: " + sonar.getDistance() + " mm");
             count++;
             
-            if (sonar.getDistance() < 450) {
+            if (sonar.getDistance() < 500) {
             	
                 //Object detected! Stop motors
                 leftMotors.setTargetVelocity(0);
@@ -55,13 +55,20 @@ public class RoverChallenge2
 
                 
                 //Wait for 2 second
-    	        Thread.sleep(1000);
+    	        Thread.sleep(800);
 
     	        //Move forward at full speed
     	        leftMotors.setTargetVelocity(0);
     	        rightMotors.setTargetVelocity(0);
     	        
     	        Thread.sleep(2000);
+    	        
+    	        leftMotors.setTargetVelocity(1);
+    	        rightMotors.setTargetVelocity(1);
+
+                
+                //Wait for 2 second
+    	        Thread.sleep(1000);
     	        
     	        count = 10 - count;
     	        
@@ -76,14 +83,16 @@ public class RoverChallenge2
             	if (count < 10){
             	
             	//Move forward at full speed
-                leftMotors.setTargetVelocity(1);
-                rightMotors.setTargetVelocity(1);
+                leftMotors.setTargetVelocity(0.75);
+                rightMotors.setTargetVelocity(0.75);
                 
             	}
             	
             	
             	else 
             	{
+            		
+            		/*
                 	//90 degree turn
                 	leftMotors.setTargetVelocity(0);
                 	rightMotors.setTargetVelocity(0);
@@ -99,6 +108,8 @@ public class RoverChallenge2
                 	leftMotors.setTargetVelocity(0);
                 	rightMotors.setTargetVelocity(0);
                	 	Thread.sleep(2000);
+               	 	
+               	 	*/
                     
                     count = 0;
             	}
@@ -107,7 +118,7 @@ public class RoverChallenge2
             	
             }
             //Wait for 2 second
-            Thread.sleep(150);
+            Thread.sleep(100);
             }
 }
 
